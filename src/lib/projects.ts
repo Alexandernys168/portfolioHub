@@ -32,10 +32,7 @@ export function getProjectMeta(slug: string): ProjectMeta {
 }
 
 export function getAllProjects(): ProjectData[] {
-  return getProjectSlugs().map((slug) => {
-    const meta = getProjectMeta(slug);
-    return { slug, ...meta } as ProjectData;
-  });
+  return getProjectSlugs().map((slug) => getProjectData(slug));
 }
 
 export function getProjectData(slug: string): ProjectData {
