@@ -1,4 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a portfolio site built with Next.js.
+
+## Adding projects
+
+Projects live in the `projects` directory. To add a new project simply create a
+folder inside `projects` and add a `project.json` file:
+
+```json
+{
+  "name": "My Project",
+  "description": "Short description"
+}
+```
+
+Optionally you can include a `README.md` or `index.js` file which will be shown
+on the project page.
 
 ## Getting Started
 
