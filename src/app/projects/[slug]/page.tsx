@@ -30,8 +30,8 @@ export default async function ProjectPage({ params }) {
         </div>
       )}
       <p>
-        <Link href="/" className="text-blue-600 underline">
-          ← Back
+        <Link href="/projects" className="text-blue-600 underline">
+          ← Back to projects
         </Link>
       </p>
     </main>

@@ -67,7 +67,7 @@ export async function getProjectData(slug: string): Promise<ProjectData | null> 
       readme,
       demoCode,
     };
-  } catch (err) {
+  } catch {
     // Return null if something goes wrong (e.g., project not found)
     return null;
   }
