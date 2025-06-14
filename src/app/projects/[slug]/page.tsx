@@ -8,12 +8,17 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }))
 }
 
-export default async function ProjectPage({ params }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function ProjectPage({ params }: { params: any }) {
   const { slug } = await params;
   const project = await getProjectData(slug);
   if (!project) return notFound();
   return (
-    <main className="max-w-2xl mx-auto p-8 space-y-6">
+    <div
+      className="min-h-screen bg-[#fcfbf8] flex justify-center"
+      style={{ fontFamily: 'Plus Jakarta Sans, "Noto Sans", sans-serif' }}
+    >
+    <main className="max-w-2xl p-8 space-y-6">
       <h1 className="text-3xl font-bold">{project.name}</h1>
       {project.description && <p>{project.description}</p>}
       {project.readme && (
@@ -30,10 +35,11 @@ export default async function ProjectPage({ params }) {
         </div>
       )}
       <p>
-        <Link href="/" className="text-blue-600 underline">
-          ← Back
+        <Link href="/projects" className="text-blue-600 underline">
+          ← Back to projects
         </Link>
       </p>
     </main>
+    </div>
   )
 }
