@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
+import Header from '@/components/Header'
 import { getProjectData, getProjectSlugs } from '@/lib/projects'
 import { notFound } from 'next/navigation'
 
@@ -15,9 +16,11 @@ export default async function ProjectPage({ params }: { params: any }) {
   if (!project) return notFound();
   return (
     <div
-      className="min-h-screen bg-[#fcfbf8] flex justify-center"
+      className="min-h-screen bg-[#fcfbf8] flex flex-col items-center"
       style={{ fontFamily: 'Plus Jakarta Sans, "Noto Sans", sans-serif' }}
     >
+      {/* Reusable header with Resume link */}
+      <Header />
     <main className="max-w-2xl p-8 space-y-6">
       <h1 className="text-3xl font-bold">{project.name}</h1>
       {project.description && <p>{project.description}</p>}
