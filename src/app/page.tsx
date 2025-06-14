@@ -14,7 +14,7 @@ export default function Home() {
                 className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
                 style={{
                   backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzcY1P239GQQ1q03N1bckzYJELUCzls7AteDq--Mzcq0nj_pCiq7uBbUgc_WI9eNZhsPLn7NCQEd7LCGN87rGoAXf4VEbt9UgBM5tNE588LRFdMmnE0uyvzinKqK7xvM26q-AW72BTR_kUzaWIV9uO_BHKNshoHXUsJSboC2jofe16AH2PFmVtV8JY5p0Hz0WwpUmLP3iahBSf1vlE0iV-EsPxqHqTfw4BzhfJBea8qAkVroXuuL_Mzy_Dp4D3vnUm5HlbZ-Rkzyo5")',
+                    'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnoxwrMNd6vqEVK2vlQX14-1rEnhtVGMpnNf6HrxYzLoqYAkTqZYDS9lsDy-qhyO0yfslJr2GiJZC3W1t2UpPApF90Bt5soAWIqoDJWMGc6e9DYtM8W6ElIqZHvq-c9xg9wA2VG-b_8ziz2jrs4-d5dq4pPC2JU5guY9DZXJ9P7O3MOaJsoYXU_bzLKnFmpUynmkuQ8mr6_oI5K-aiyirV9NGlnZHCEPLvhP2y3WCczKx2fKkvQmIW4fPwrToBfQBI2FACNbP4vGwS")',
                 }}
               >
                 <div className="flex flex-col gap-2 text-center">
