@@ -42,7 +42,8 @@ export async function getProjectMeta(slug: string): Promise<ProjectMeta> {
 
 export async function getAllProjects(): Promise<ProjectData[]> {
   const slugs = await getProjectSlugs();
-  return Promise.all(slugs.map((slug) => getProjectData(slug)));
+  const projects = await Promise.all(slugs.map((slug) => getProjectData(slug)));
+  return projects.filter(Boolean) as ProjectData[];
 }
 
 export async function getProjectData(slug: string): Promise<ProjectData | null> {
