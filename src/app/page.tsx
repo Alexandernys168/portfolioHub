@@ -1,4 +1,6 @@
 import Link from 'next/link'
+// Global header with Resume link
+import Header from '@/components/Header'
 
 export default function Home() {
   return (
@@ -6,6 +8,8 @@ export default function Home() {
       className="relative flex min-h-screen flex-col bg-[#fcfbf8] overflow-x-hidden group/design-root"
       style={{ fontFamily: 'Plus Jakarta Sans, \"Noto Sans\", sans-serif' }}
     >
+      {/* Site header */}
+      <Header />
       <div className="flex flex-1 justify-center py-5 px-4">
         <div className="flex flex-col w-full max-w-[960px] flex-1 layout-content-container">
           <div className="@container">

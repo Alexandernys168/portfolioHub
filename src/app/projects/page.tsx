@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Header from '@/components/Header'
 import { getAllProjects } from '@/lib/projects'
 
 export default async function ProjectsPage() {
@@ -8,26 +9,8 @@ export default async function ProjectsPage() {
       className="min-h-screen flex flex-col bg-[#fcfbf8]"
       style={{ fontFamily: 'Plus Jakarta Sans, "Noto Sans", sans-serif' }}
     >
-      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f0e7] px-10 py-3">
-        <div className="flex items-center gap-4 text-[#1c180d]">
-          <div className="size-4">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clipPath="url(#clip0)">
-                <path d="M8.578 8.578a18 18 0 104.032 26.781L24 24 8.578 8.578z" fill="currentColor" />
-              </g>
-              <defs>
-                <clipPath id="clip0"><rect width="48" height="48" fill="white" /></clipPath>
-              </defs>
-            </svg>
-          </div>
-          <h2 className="text-[#1c180d] text-lg font-bold leading-tight tracking-[-0.015em]">Portfolio</h2>
-        </div>
-        <nav className="flex flex-1 justify-end gap-9 text-sm font-medium">
-          <Link href="/about" className="text-[#1c180d]">About</Link>
-          <Link href="/projects" className="text-[#1c180d]">Projects</Link>
-          <Link href="/contact" className="text-[#1c180d]">Contact</Link>
-        </nav>
-      </header>
+      {/* Reusable header with Resume link */}
+      <Header />
       <main className="flex-1 max-w-[960px] w-full mx-auto p-8 space-y-6">
         <h1 className="text-[32px] font-bold leading-tight tracking-light text-[#1c180d]">My Projects</h1>
         <p className="text-[#9c8749] text-sm">A selection of my most recent work.</p>

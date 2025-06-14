@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Header from '@/components/Header';
 
 export default function Contact() {
   return (
@@ -6,23 +6,8 @@ export default function Contact() {
       className="relative flex min-h-screen flex-col bg-[#fcfbf8] overflow-x-hidden"
       style={{ fontFamily: 'Plus Jakarta Sans, "Noto Sans", sans-serif' }}
     >
-      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f0e7] px-10 py-3">
-        <div className="flex items-center gap-4 text-[#1c180d]">
-          <div className="size-4">
-            {/* Ikon */}
-            <svg viewBox="0 0 48 48" fill="none"><g><path d="M8.578 8.578a18 18 0 104.032 26.781L24 24 8.578 8.578z" fill="currentColor" /></g></svg>
-          </div>
-          <h2 className="text-[#1c180d] text-lg font-bold leading-tight tracking-[-0.015em]">Portfolio</h2>
-        </div>
-        <div className="flex flex-1 justify-end gap-8">
-          <nav className="flex items-center gap-9 text-sm font-medium">
-            <Link href="/" className="text-[#1c180d]">Home</Link>
-            <Link href="/projects" className="text-[#1c180d]">Projects</Link>
-            <Link href="/about" className="text-[#1c180d]">About</Link>
-            <Link href="/contact" className="text-[#1c180d]">Contact</Link>
-          </nav>
-        </div>
-      </header>
+      {/* Reusable header with Resume link */}
+      <Header />
       <main className="flex flex-1 justify-center py-5 px-40">
         <div className="flex flex-col max-w-[960px] flex-1 layout-content-container">
           <div className="flex p-4 @container">
