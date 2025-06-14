@@ -1,18 +1,16 @@
-import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
-import { getProjectData, getProjectSlugs } from '@/lib/projects';
-import { notFound } from 'next/navigation';
+import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
+import { getProjectData, getProjectSlugs } from '@/lib/projects'
+import { notFound } from 'next/navigation'
 
-interface Params {
-  params: { slug: string };
+export async function generateStaticParams() {
+  const slugs = await getProjectSlugs()
+  return slugs.map((slug) => ({ slug }))
 }
 
-export function generateStaticParams() {
-  return getProjectSlugs().map((slug) => ({ slug }));
-}
-
-export default function ProjectPage({ params }: Params) {
-  const project = getProjectData(params.slug);
+export default async function ProjectPage({ params }) {
+  const { slug } = await params;
+  const project = await getProjectData(slug);
   if (!project) return notFound();
   return (
     <main className="max-w-2xl mx-auto p-8 space-y-6">
@@ -37,5 +35,5 @@ export default function ProjectPage({ params }: Params) {
         </Link>
       </p>
     </main>
-  );
+  )
 }

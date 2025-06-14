@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import { getAllProjects } from '@/lib/projects';
+import Link from 'next/link'
+import { getAllProjects } from '@/lib/projects'
 
-export default function Home() {
-  const projects = getAllProjects();
+export default async function Home() {
+  const projects = await getAllProjects() // ← Du måste hämta projekten först!
   return (
     <main className="max-w-4xl mx-auto p-8 space-y-6">
       <h1 className="text-4xl font-bold text-center">Portfolio</h1>
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => {
-          const preview = project.readme || project.demoCode || '';
-          const snippet = preview.split('\n').slice(0, 4).join('\n');
+          const preview = project.readme || project.demoCode || ''
+          const snippet = preview.split('\n').slice(0, 4).join('\n')
           return (
             <Link
               href={`/projects/${project.slug}`}
@@ -24,9 +24,9 @@ export default function Home() {
                 </pre>
               )}
             </Link>
-          );
+          )
         })}
       </div>
     </main>
-  );
+  )
 }
