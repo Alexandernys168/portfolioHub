@@ -1,8 +1,12 @@
 import Link from 'next/link'
 // Global header with Resume link
 import Header from '@/components/Header'
+import { getAllProjects } from '@/lib/projects'
+import ProjectCard from '@/components/ProjectCard'
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getAllProjects()
+  const featured = projects.filter((p) => p.featured)
   return (
     <div
       className="relative flex min-h-screen flex-col bg-[#fcfbf8] overflow-x-hidden group/design-root"
@@ -38,6 +42,16 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {featured.length > 0 && (
+            <section className="my-8 space-y-4">
+              <h2 className="text-xl font-bold">Featured Projects</h2>
+              <div className="grid gap-6 md:grid-cols-2">
+                {featured.map((p) => (
+                  <ProjectCard key={p.slug} project={p} />
+                ))}
+              </div>
+            </section>
+          )}
           <footer className="flex flex-col gap-6 px-5 py-10 text-center @container">
             <div className="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
               <Link href="/about" className="text-[#9c8749] text-base min-w-40">
