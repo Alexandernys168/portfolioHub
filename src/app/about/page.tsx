@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 export default function About() {
   return (
     <div
-      className="relative flex min-h-screen flex-col bg-[#fcfbf8] overflow-x-hidden"
+      className="relative flex min-h-screen flex-col overflow-x-hidden"
       style={{ fontFamily: 'Plus Jakarta Sans, "Noto Sans", sans-serif' }}
     >
       {/* Reusable header with Resume link */}

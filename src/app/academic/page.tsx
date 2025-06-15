@@ -9,7 +9,7 @@ export default async function AcademicPage() {
 
   return (
     <div
-      className="min-h-screen flex flex-col bg-[#fcfbf8]"
+      className="min-h-screen flex flex-col"
       style={{ fontFamily: 'Plus Jakarta Sans, "Noto Sans", sans-serif' }}
     >
       <Header />

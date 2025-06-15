@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function ResumePage() {
   return (
     <div
-      className="min-h-screen flex flex-col bg-[#fcfbf8]"
+      className="min-h-screen flex flex-col"
       style={{ fontFamily: 'Plus Jakarta Sans, "Noto Sans", sans-serif' }}
     >
       {/* Header with resume navigation */}

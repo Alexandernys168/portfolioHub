@@ -9,7 +9,7 @@ export default async function Home() {
   const featured = projects.filter((p) => p.featured)
   return (
     <div
-      className="relative flex min-h-screen flex-col bg-[#fcfbf8] overflow-x-hidden group/design-root"
+      className="relative flex min-h-screen flex-col overflow-x-hidden group/design-root"
       style={{ fontFamily: 'Plus Jakarta Sans, \"Noto Sans\", sans-serif' }}
     >
       {/* Site header */}
