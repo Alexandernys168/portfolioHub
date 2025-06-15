@@ -3,6 +3,7 @@
   "description": "A React-based frontend for managing medical records with Firebase authentication, role-based access control, mock data generation, and basic dashboards—designed to function independently without a backend.",
   "external": true,
   "link": "https://dev-ops-front-end.vercel.app/",
+  "gitLink" : "https://github.com/Alexandernys168/DevOps-FrontEnd",
   "demoImage": "/images/devOpsDemoImage.png",
   "tech": ["Next.js", "TypeScript", "DockerFile", "HTML", "CSS"],
   "tags": ["demo"],

@@ -25,15 +25,29 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
             ))}
           </div>
         )}
-        {project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-2 px-3 py-1 bg-blue-600 text-white rounded"
-          >
-            Visit
-          </a>
+        {(project.link || project.gitLink) && (
+          <div className="flex gap-2 mt-2">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1 bg-blue-600 text-white rounded"
+              >
+                Visit
+              </a>
+            )}
+            {project.gitLink && (
+              <a
+                href={project.gitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1 bg-blue-600 text-white rounded"
+              >
+                GitHub
+              </a>
+            )}
+          </div>
         )}
       </div>
     )

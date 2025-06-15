@@ -21,7 +21,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased font-sans text-[#1c180d] bg-desert-gradient from-desert-start to-desert-end min-h-screen">
+
+      <body className="min-h-screen bg-gradient-to-b from-desert-start to-desert-end antialiased font-sans text-[#1c180d]">
         {children}
       </body>
     </html>

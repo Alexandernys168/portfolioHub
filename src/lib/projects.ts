@@ -6,6 +6,7 @@ export interface ProjectMeta {
   description?: string;
   external?: boolean;
   link?: string;
+  gitLink?: string;
   demoImage?: string;
   tech?: string[];
   tags?: string[];

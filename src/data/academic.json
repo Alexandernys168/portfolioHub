@@ -9,11 +9,11 @@
     "featured": true
   },
   {
-    "name": "Sustainable Computing Report",
-    "description": "Energy efficient algorithms for data centers",
-    "demoImage": "https://placehold.co/600x400",
-    "link": "https://example.com/report.pdf",
-    "pdf": "/academic/placeholder.pdf",
-    "tech": ["Go", "Distributed Systems"]
+    "name": "Ett system för talangutveckling inom ungdomsfotboll",
+    "description": "Ett arbete med fokus på att analysera och visualisera tränings- och matchdata för AIK:s ungdomslag, med målet att ge tränare bättre insikter i spelarutveckling och prestation.",
+    "demoImage": "/images/kthLogo.png",
+    "link": "https://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1900598&dswid=7657",
+    "pdf": "/academic/FULLTEXT01.pdf",
+    "tech": ["TypeScript", "React", "SQL", "Java", "Spring Boot"]
   }
 ]
