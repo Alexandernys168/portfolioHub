@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Deep Learning for Nature",
+    "description": "Using neural networks to classify wildlife images",
+    "demoImage": "https://placehold.co/600x400",
+    "link": "https://example.com/paper.pdf",
+    "pdf": "/academic/placeholder.pdf",
+    "tech": ["Python", "TensorFlow"],
+    "featured": true
+  },
+  {
+    "name": "Sustainable Computing Report",
+    "description": "Energy efficient algorithms for data centers",
+    "demoImage": "https://placehold.co/600x400",
+    "link": "https://example.com/report.pdf",
+    "pdf": "/academic/placeholder.pdf",
+    "tech": ["Go", "Distributed Systems"]
+  }
+]

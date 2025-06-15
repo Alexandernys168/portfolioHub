@@ -15,6 +15,7 @@ export default function Header() {
         <nav className="flex items-center gap-9 text-sm font-medium">
           <Link href="/" className="text-[#1c180d]">Home</Link>
           <Link href="/projects" className="text-[#1c180d]">Projects</Link>
+          <Link href="/academic" className="text-[#1c180d]">Academic Work</Link>
           <Link href="/about" className="text-[#1c180d]">About</Link>
           <Link href="/contact" className="text-[#1c180d]">Contact</Link>
         </nav>
