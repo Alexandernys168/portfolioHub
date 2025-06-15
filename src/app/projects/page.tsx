@@ -6,7 +6,7 @@ export default async function ProjectsPage() {
   const projects = await getAllProjects()
   return (
     <div
-      className="min-h-screen flex flex-col bg-[#fcfbf8]"
+      className="min-h-screen flex flex-col"
       style={{ fontFamily: 'Plus Jakarta Sans, "Noto Sans", sans-serif' }}
     >
       {/* Reusable header with Resume link */}
