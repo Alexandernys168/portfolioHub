@@ -2,8 +2,8 @@ This is a portfolio site built with Next.js.
 
 ## Adding projects
 
-Projects live in the `projects` directory. To add a new project simply create a
-folder inside `projects` and add a `project.json` file:
+Projects live in the `projects` directory. To add an **internal** project create
+a folder inside `projects` and add a `project.json` file:
 
 ```json
 {
@@ -14,6 +14,22 @@ folder inside `projects` and add a `project.json` file:
 
 Optionally you can include a `README.md` or `index.js` file which will be shown
 on the project page.
+
+External projects can be added by dropping a single `project-name.json` file
+directly inside the `projects` folder. Example:
+
+```json
+{
+  "name": "External App",
+  "description": "Hosted elsewhere",
+  "external": true,
+  "link": "https://example.com",
+  "demoImage": "https://placehold.co/600x400",
+  "tech": ["Next.js", "TypeScript"],
+  "tags": ["demo"],
+  "featured": true
+}
+```
 
 ## Getting Started
 

@@ -1,19 +1,19 @@
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import Header from '@/components/Header'
-import { getProjectData, getProjectSlugs } from '@/lib/projects'
+import { getAllProjects, getProjectData } from '@/lib/projects'
 import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
-  const slugs = await getProjectSlugs()
-  return slugs.map((slug) => ({ slug }))
+  const projects = await getAllProjects()
+  return projects.filter(p => !p.external).map((p) => ({ slug: p.slug }))
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function ProjectPage({ params }: { params: any }) {
   const { slug } = await params;
   const project = await getProjectData(slug);
-  if (!project) return notFound();
+  if (!project || project.external) return notFound();
   return (
     <div
       className="min-h-screen bg-[#fcfbf8] flex flex-col items-center"

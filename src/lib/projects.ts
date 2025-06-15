@@ -4,6 +4,12 @@ import path from 'path';
 export interface ProjectMeta {
   name: string;
   description?: string;
+  external?: boolean;
+  link?: string;
+  demoImage?: string;
+  tech?: string[];
+  tags?: string[];
+  featured?: boolean;
 }
 
 export interface ProjectData extends ProjectMeta {
@@ -14,8 +20,13 @@ export interface ProjectData extends ProjectMeta {
 
 const PROJECTS_DIR = path.join(process.cwd(), 'projects');
 
-async function isDirectory(source: string) {
-  return (await fs.stat(source)).isDirectory();
+async function exists(p: string) {
+  try {
+    await fs.access(p);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export async function getProjectSlugs(): Promise<string[]> {
@@ -27,15 +38,25 @@ export async function getProjectSlugs(): Promise<string[]> {
   const names = await fs.readdir(PROJECTS_DIR);
   const slugs: string[] = [];
   for (const name of names) {
-    if (await isDirectory(path.join(PROJECTS_DIR, name))) {
+    const full = path.join(PROJECTS_DIR, name);
+    const stat = await fs.stat(full);
+    if (stat.isDirectory()) {
       slugs.push(name);
+    } else if (stat.isFile() && name.endsWith('.json')) {
+      slugs.push(name.replace(/\.json$/, ''));
     }
   }
   return slugs;
 }
 
 export async function getProjectMeta(slug: string): Promise<ProjectMeta> {
-  const file = path.join(PROJECTS_DIR, slug, 'project.json');
+  const dirFile = path.join(PROJECTS_DIR, slug, 'project.json');
+  try {
+    const raw = await fs.readFile(dirFile, 'utf8');
+    return JSON.parse(raw) as ProjectMeta;
+  } catch {}
+
+  const file = path.join(PROJECTS_DIR, `${slug}.json`);
   const raw = await fs.readFile(file, 'utf8');
   return JSON.parse(raw) as ProjectMeta;
 }
@@ -49,18 +70,20 @@ export async function getAllProjects(): Promise<ProjectData[]> {
 export async function getProjectData(slug: string): Promise<ProjectData | null> {
   try {
     const meta = await getProjectMeta(slug);
-    const readmePath = path.join(PROJECTS_DIR, slug, 'README.md');
-    const demoPath = path.join(PROJECTS_DIR, slug, 'index.js');
-    let readme: string | undefined = undefined;
-    let demoCode: string | undefined = undefined;
+    const dir = path.join(PROJECTS_DIR, slug);
+    let readme: string | undefined;
+    let demoCode: string | undefined;
 
-    try {
-      readme = await fs.readFile(readmePath, 'utf8');
-    } catch {}
-
-    try {
-      demoCode = await fs.readFile(demoPath, 'utf8');
-    } catch {}
+    if (await exists(dir)) {
+      const readmePath = path.join(dir, 'README.md');
+      const demoPath = path.join(dir, 'index.js');
+      try {
+        readme = await fs.readFile(readmePath, 'utf8');
+      } catch {}
+      try {
+        demoCode = await fs.readFile(demoPath, 'utf8');
+      } catch {}
+    }
 
     return {
       slug,

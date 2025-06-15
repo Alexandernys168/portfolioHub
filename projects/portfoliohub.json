@@ -1,0 +1,10 @@
+{
+  "name": "PortfolioHub Repo",
+  "description": "GitHub repository for this site",
+  "external": true,
+  "link": "https://github.com/example/portfolioHub",
+  "demoImage": "https://placehold.co/600x400",
+  "tech": ["Next.js", "TypeScript"],
+  "tags": ["portfolio", "open-source"],
+  "featured": true
+}

@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import Header from '@/components/Header'
 import { getAllProjects } from '@/lib/projects'
+import ProjectCard from '@/components/ProjectCard'
 
 export default async function ProjectsPage() {
   const projects = await getAllProjects()
@@ -15,25 +15,9 @@ export default async function ProjectsPage() {
         <h1 className="text-[32px] font-bold leading-tight tracking-light text-[#1c180d]">My Projects</h1>
         <p className="text-[#9c8749] text-sm">A selection of my most recent work.</p>
         <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project) => {
-            const preview = project.readme || project.demoCode || ''
-            const snippet = preview.split('\n').slice(0, 4).join('\n')
-            return (
-              <Link
-                href={`/projects/${project.slug}`}
-                key={project.slug}
-                className="block p-4 border rounded-lg shadow bg-white/70 hover:bg-white"
-              >
-                <h2 className="text-base font-medium text-[#1c180d] mb-1">{project.name}</h2>
-                {project.description && <p className="mb-2 text-sm text-[#9c8749]">{project.description}</p>}
-                {snippet && (
-                  <pre className="text-xs bg-gray-100 p-2 rounded whitespace-pre-wrap">
-                    <code>{snippet}</code>
-                  </pre>
-                )}
-              </Link>
-            )
-          })}
+          {projects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
         </div>
       </main>
       <footer className="flex flex-col items-center gap-6 px-5 py-10 text-center">
