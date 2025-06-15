@@ -22,7 +22,7 @@ export default async function Home() {
                 className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
                 style={{
                   backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnoxwrMNd6vqEVK2vlQX14-1rEnhtVGMpnNf6HrxYzLoqYAkTqZYDS9lsDy-qhyO0yfslJr2GiJZC3W1t2UpPApF90Bt5soAWIqoDJWMGc6e9DYtM8W6ElIqZHvq-c9xg9wA2VG-b_8ziz2jrs4-d5dq4pPC2JU5guY9DZXJ9P7O3MOaJsoYXU_bzLKnFmpUynmkuQ8mr6_oI5K-aiyirV9NGlnZHCEPLvhP2y3WCczKx2fKkvQmIW4fPwrToBfQBI2FACNbP4vGwS")',
+                    'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9pQ2q9MrE_kxbW-C23wU9oQSTobeSzcoIjgEAyh1QAqFhZ1Y3jvixlUC04BFbbsFo6ikU89nC4N9zaCx_8HCW5rcuLHHxoqMk9UyZr40KGwAQ3f7tTFIAi12cJIRdCVRzaGVZ7voDzm6zs51q3IdBl3kVYiII-9VYA1LmIJ7HGdzvzPp37gEUxOm-NkxonG6LSBTPa_UgWiiIvJxeH1G-Hwg0Lehot8mhaPw1ljIXRFRz6-RMOiNE2LZbPuRpjxO1WI5dYUhf7zRm")',
                 }}
               >
                 <div className="flex flex-col gap-2 text-center">

@@ -2,9 +2,9 @@
   "name": "PortfolioHub Repo",
   "description": "GitHub repository for this site",
   "external": true,
-  "link": "https://github.com/example/portfolioHub",
-  "demoImage": "https://placehold.co/600x400",
-  "tech": ["Next.js", "TypeScript"],
+  "link": "https://github.com/Alexandernys168/portfolioHub",
+  "demoImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuDnoxwrMNd6vqEVK2vlQX14-1rEnhtVGMpnNf6HrxYzLoqYAkTqZYDS9lsDy-qhyO0yfslJr2GiJZC3W1t2UpPApF90Bt5soAWIqoDJWMGc6e9DYtM8W6ElIqZHvq-c9xg9wA2VG-b_8ziz2jrs4-d5dq4pPC2JU5guY9DZXJ9P7O3MOaJsoYXU_bzLKnFmpUynmkuQ8mr6_oI5K-aiyirV9NGlnZHCEPLvhP2y3WCczKx2fKkvQmIW4fPwrToBfQBI2FACNbP4vGwS",
+  "tech": ["JavaScript", "TypeScript", "CSS"],
   "tags": ["portfolio", "open-source"],
-  "featured": true
+  "featured": false
 }

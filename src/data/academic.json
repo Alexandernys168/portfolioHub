@@ -1,10 +1,10 @@
 [
   {
-    "name": "Deep Learning for Nature",
-    "description": "Using neural networks to classify wildlife images",
-    "demoImage": "https://placehold.co/600x400",
-    "link": "https://example.com/paper.pdf",
-    "pdf": "/academic/placeholder.pdf",
+    "name": "Climate Change Sentiment Analysis based on Gender",
+    "description": "Understanding public opinion on climate change is essential for capturing societal perspectives and informing policy decisions.",
+    "demoImage": "/images/genderSentimentResearchImage.png",
+    "link": "https://github.com/Alexandernys168/TDDE16-GenderSentiment/tree/main",
+    "pdf": "https://github.com/Alexandernys168/TDDE16-GenderSentiment/blob/main/Climate_Change_Sentiment_Analysis_Based_On_Gender.pdf",
     "tech": ["Python", "TensorFlow"],
     "featured": true
   },
